@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.15.4/css/all.css");
+:root {
+  --blue: hsl(223, 87%, 63%);
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Libre Franklin", sans-serif;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main {
+  max-width: 100%;
+  margin: 1rem;
+}
+main .top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 50%;
+  margin: 3rem auto;
+}
+main .top .logo {
+  margin-bottom: 1.25rem;
+}
+main .top .logo img {
+  width: 100%;
+}
+main .top h1 {
+  color: var(--gray);
+  font-weight: 300;
+  font-size: 3rem;
+}
+main .top h1 span {
+  color: var(--very-dark-blue);
+  font-weight: 700;
+}
+main .top p {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+main .top .input {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+main .top .input .input-email {
+  position: relative;
+  width: 66%;
+}
+main .top .input .input-email #email {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 25px;
+  border: 1px solid var(--gray);
+}
+main .top .input .input-email #email::placeholder {
+  color: var(--gray);
+}
+main .top .input .input-email #email:focus {
+  outline: none;
+}
+main .top .input #error {
+  position: absolute;
+  color: var(--light-red);
+  font-size: 0.8rem;
+  font-style: italic;
+  bottom: -90%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+main .top .input #error.show {
+  display: block;
+}
+main .top .input button {
+  width: 30%;
+  border-radius: 25px;
+  padding: 1rem 1.5rem;
+  border: none;
+  background-color: var(--blue);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.15);
+}
+main .top .input button:hover {
+  opacity: 0.85;
+}
+
+main .img-wrapper {
+  width: 50%;
+  margin: 5rem auto 3.25rem;
+}
+main .img-wrapper img {
+  width: 100%;
+}
+footer {
+  margin-bottom: 3rem;
+}
+footer .icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--blue);
+  margin-bottom: 1.5rem;
+}
+footer .icons .icon {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--gray);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+footer p {
+  color: var(--gray);
+  font-size: 0.8rem;
+}
+footer .icons .icon:hover {
+  background-color: var(--blue);
+  color: white;
+  border: none;
+}
+
+@media screen and (max-width: 375px) {
+  main .top {
+    width: 100%;
+    text-align: center;
+  }
+  main .top .logo {
+    width: 20%;
+  }
+  main .top h1 {
+    font-size: 1.5rem;
+  }
+  main .top p {
+    font-size: 0.9rem;
+  }
+  main .top .input {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  main .top .input .input-email {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main .top .input .input-email #email::placeholder {
+    padding-left: 1rem;
+  }
+  main .top .input .input-email #error {
+    width: 100%;
+    position: relative;
+    bottom: unset;
+    left: unset;
+    transform: unset;
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  main .top .input button {
+    width: 90%;
+    margin: 0 auto;
+  }
+  main .img-wrapper {
+    width: 90%;
+    margin-bottom: 6rem;
+  }
+  footer p {
+    font-size: 0.7rem;
+  }
+}
